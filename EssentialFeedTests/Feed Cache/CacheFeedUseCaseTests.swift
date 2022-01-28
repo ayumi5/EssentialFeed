@@ -8,15 +8,6 @@
 import XCTest
 import EssentialFeed
 
-class FeedStore {
-    var deleteCachedFeedCallCount = 0
-    
-    func deleteCachedFeed() {
-        deleteCachedFeedCallCount += 1
-    }
-    
-}
-
 class LocalFeedLoader {
     private let store: FeedStore
     init(store: FeedStore) {
@@ -24,9 +15,39 @@ class LocalFeedLoader {
     }
     
     func save(_ items: [FeedItem]) {
-        store.deleteCachedFeed()
+        store.deleteCachedFeed { [unowned self] error in
+            if error == nil {
+                self.store.insert(items)
+            }
+        }
     }
 }
+
+class FeedStore {
+    var deleteCachedFeedCallCount = 0
+    var insertCallCount = 0
+    var completions = [DeletionCompletion]()
+    typealias DeletionCompletion = (Error?) -> Void
+    
+    func deleteCachedFeed(completion: @escaping DeletionCompletion) {
+        deleteCachedFeedCallCount += 1
+        completions.append(completion)
+    }
+    
+    func complete(with error: Error, at index: Int = 0) {
+        completions[index](error)
+    }
+    
+    func completeSuccessfully(at index: Int = 0) {
+        completions[index](nil)
+    }
+    
+    func insert(_ items: [FeedItem]) {
+        insertCallCount += 1
+    }
+    
+}
+
 
 class CacheFeedUseCaseTests: XCTestCase {
     func test_doesNotDeleteCacheUponCreation() {
@@ -39,6 +60,25 @@ class CacheFeedUseCaseTests: XCTestCase {
         let items = [uniqueItem(),uniqueItem()]
         sut.save(items)
         XCTAssertEqual(store.deleteCachedFeedCallCount, 1)
+    }
+    
+    func test_save_doesNotRequestCacheInsertionOnDeletionError() {
+        let (sut, store) = makeSUT()
+        let items = [uniqueItem(),uniqueItem()]
+        let deletionError = anyNSError()
+
+        sut.save(items)
+        store.complete(with: deletionError)
+        XCTAssertEqual(store.insertCallCount, 0)
+    }
+    
+    func test_save_requestCacheInsertion() {
+        let (sut, store) = makeSUT()
+        let items = [uniqueItem(),uniqueItem()]
+
+        sut.save(items)
+        store.completeSuccessfully()
+        XCTAssertEqual(store.insertCallCount, 1)
     }
  
     // MARK: - Helpers
@@ -57,5 +97,9 @@ class CacheFeedUseCaseTests: XCTestCase {
     
     private func anyURL() -> URL {
         return URL(string: "http://any-url.com")!
+    }
+    
+    private func anyNSError() -> NSError {
+        return NSError(domain: "any error", code: 0)
     }
 }
