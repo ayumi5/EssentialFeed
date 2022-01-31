@@ -55,7 +55,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         let deletionError = anyNSError()
 
         sut.save(items) { _ in }
-        store.complete(with: deletionError)
+        store.completeDeletion(with: deletionError)
         XCTAssertEqual(store.receivedMessages, [.deletionCompletion])
     }
     
@@ -73,7 +73,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         let deletionError = anyNSError()
         expect(sut, completeWithError: deletionError, when: {
-            store.complete(with: deletionError)
+            store.completeDeletion(with: deletionError)
         })
     }
     
@@ -101,7 +101,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         
         sut?.save([uniqueItem()]) { receivedResults.append($0)}
         sut = nil
-        store.complete(with: anyNSError())
+        store.completeDeletion(with: anyNSError())
         
         XCTAssertTrue(receivedResults.isEmpty)
     }
@@ -148,7 +148,7 @@ class CacheFeedUseCaseTests: XCTestCase {
             receivedMessages.append(.deletionCompletion)
         }
         
-        func complete(with error: Error, at index: Int = 0) {
+        func completeDeletion(with error: Error, at index: Int = 0) {
             deletionCompletions[index](error)
         }
         
