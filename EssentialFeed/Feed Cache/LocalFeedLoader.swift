@@ -39,9 +39,7 @@ public final class LocalFeedLoader {
                 completion(.failure(error))
             case let .found(images, timestamp) where self.validate(timestamp):
                 completion(.success(images.toModels()))
-            case .found:
-                completion(.success([]))
-            case .empty:
+            case .found, .empty:
                 completion(.success([]))
             }
         }
