@@ -43,6 +43,8 @@ extension FeedStoreSpecs where Self: XCTestCase {
     }
     
     func assertThatInsertDeliversNoErrorOnNonEmptyCache(on sut: FeedStore, file: StaticString = #filePath, line: UInt = #line) {
+        insert((uniqueImageFeed().locals, Date()), to: sut)
+        
         let insertionError = insert((uniqueImageFeed().locals, Date()), to: sut)
         
         XCTAssertNil(insertionError, "Expected to override cache successfully", file: file, line: line)
