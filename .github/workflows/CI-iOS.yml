@@ -1,4 +1,4 @@
-name: Swift
+name: CI-iOS
 
 on:
   push:
@@ -16,4 +16,6 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode.app
     - name: Build and test
-      run: xcodebuild clean build -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGNING_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      run:
+      - xcodebuild clean build -project EssentialFeed.xcodeproj -scheme "CI_iOS" CODE_SIGNING_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13, OS=15.0" CODE_SIGNING_ALLOWED=NO
+      -
