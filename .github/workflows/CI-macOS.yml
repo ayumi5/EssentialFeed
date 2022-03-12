@@ -16,6 +16,4 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode.app
     - name: Build and test
-      run:
-      - xcodebuild clean build -project EssentialFeed.xcodeproj -scheme "CI_macOS" CODE_SIGNING_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" CODE_SIGNING_ALLOWED=NO
-      -
+      run: xcodebuild clean build -project EssentialFeed.xcodeproj -scheme "CI_macOS" CODE_SIGNING_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" CODE_SIGNING_ALLOWED=NO
