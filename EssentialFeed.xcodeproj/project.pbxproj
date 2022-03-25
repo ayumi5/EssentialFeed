@@ -12,6 +12,7 @@
 		DA0ABAF027ED9EBD0040CBBE /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ABAEF27ED9EBD0040CBBE /* UIRefreshControl+TestHelpers.swift */; };
 		DA0ABAF227ED9F1B0040CBBE /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ABAF127ED9F1B0040CBBE /* UIButton+TestHelpers.swift */; };
 		DA0ABAF427ED9F970040CBBE /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ABAF327ED9F970040CBBE /* UIControl+TestHelpers.swift */; };
+		DA0ABAFB27EDA4E00040CBBE /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ABAFA27EDA4E00040CBBE /* FeedViewController+TestHelpers.swift */; };
 		DA361E0E27BC96F300B97494 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361E0D27BC96F300B97494 /* CoreDataHelpers.swift */; };
 		DA361E1027BC99F700B97494 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361E0F27BC99F700B97494 /* ManagedCache.swift */; };
 		DA361E1227BC9A4D00B97494 /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361E1127BC9A4D00B97494 /* ManagedFeedImage.swift */; };
@@ -123,6 +124,7 @@
 		DA0ABAEF27ED9EBD0040CBBE /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		DA0ABAF127ED9F1B0040CBBE /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		DA0ABAF327ED9F970040CBBE /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		DA0ABAFA27EDA4E00040CBBE /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		DA361E0D27BC96F300B97494 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		DA361E0F27BC99F700B97494 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		DA361E1127BC9A4D00B97494 /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
@@ -246,6 +248,23 @@
 				DA58A96D27EC09F40061919F /* UIView+Shimmering.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA0ABAF827EDA4CA0040CBBE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA0ABAF927EDA4D00040CBBE /* Helpers */,
+				DA5A959527E070540057DE15 /* FeedViewControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA0ABAF927EDA4D00040CBBE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DA0ABAFA27EDA4E00040CBBE /* FeedViewController+TestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DA361E1827BCDA2C00B97494 /* EssentialFeedCacheIntegrationTests */ = {
@@ -413,7 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				DA58A97027ED9DF00061919F /* Helpers */,
-				DA5A959527E070540057DE15 /* FeedViewControllerTests.swift */,
+				DA0ABAF827EDA4CA0040CBBE /* Controllers */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -754,6 +773,7 @@
 				DA5A959627E070540057DE15 /* FeedViewControllerTests.swift in Sources */,
 				DA0ABAF227ED9F1B0040CBBE /* UIButton+TestHelpers.swift in Sources */,
 				DA0ABAF027ED9EBD0040CBBE /* UIRefreshControl+TestHelpers.swift in Sources */,
+				DA0ABAFB27EDA4E00040CBBE /* FeedViewController+TestHelpers.swift in Sources */,
 				DA0ABAF427ED9F970040CBBE /* UIControl+TestHelpers.swift in Sources */,
 				DA5A959D27E0847B0057DE15 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				DA0ABAEE27ED9E360040CBBE /* UIImage+TestHelpers.swift in Sources */,
