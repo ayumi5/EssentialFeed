@@ -4,8 +4,6 @@
 //
 //  Created by 宇高あゆみ on 2022/03/28.
 //
-import Foundation
-import EssentialFeed
 
 struct FeedImageViewModel<Image> {
     let description: String?
