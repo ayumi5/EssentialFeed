@@ -136,19 +136,11 @@ Description Description </string>
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
-                            <action selector="refresh" destination="KeA-7E-TzP" eventType="valueChanged" id="ahR-Sf-0Gm"/>
+                            <action selector="refresh" destination="wvO-eo-SmN" eventType="valueChanged" id="KKa-sV-GzQ"/>
                         </connections>
                     </refreshControl>
-                    <connections>
-                        <outlet property="refreshController" destination="KeA-7E-TzP" id="O6h-Bx-tnr"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP7-IH-RSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="KeA-7E-TzP" customClass="FeedRefreshViewController" customModule="EssentialFeediOS" customModuleProvider="target">
-                    <connections>
-                        <outlet property="view" destination="8Ow-JS-F4S" id="tmI-Kp-ZU4"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="417.39130434782612" y="-179.46428571428569"/>
         </scene>
