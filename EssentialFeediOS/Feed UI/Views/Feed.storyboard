@@ -130,6 +130,7 @@ Description Description </string>
                         <connections>
                             <outlet property="dataSource" destination="wvO-eo-SmN" id="niD-Js-mZF"/>
                             <outlet property="delegate" destination="wvO-eo-SmN" id="xfz-JM-mfh"/>
+                            <outlet property="prefetchDataSource" destination="wvO-eo-SmN" id="JTn-Rw-HV0"/>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8Ow-JS-F4S">
