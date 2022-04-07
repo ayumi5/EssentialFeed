@@ -163,6 +163,7 @@
 		DA4F7C8427FE71D40005DAE2 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 		DA4F7C8727FE77530005DAE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		DA4F7C8927FE77F30005DAE2 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		DA4F7C8A27FE782C0005DAE2 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		DA58A96D27EC09F40061919F /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		DA5A959527E070540057DE15 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		DA5A959E27E176960057DE15 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -706,6 +707,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = DA898FBD277083A400674D30;
 			productRefGroup = DA898FC8277083A400674D30 /* Products */;
@@ -912,6 +914,7 @@
 			children = (
 				DA4F7C8727FE77530005DAE2 /* en */,
 				DA4F7C8927FE77F30005DAE2 /* pt-BR */,
+				DA4F7C8A27FE782C0005DAE2 /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
