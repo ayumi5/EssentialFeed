@@ -82,6 +82,7 @@
 		DAF62DE327A25B0F00C53848 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF62DE227A25B0F00C53848 /* CacheFeedUseCaseTests.swift */; };
 		DAF80B8028065028000B0653 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B7F28065028000B0653 /* WeakRefVirtualProxy.swift */; };
 		DAF80B82280653B0000B0653 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B81280653B0000B0653 /* ErrorView.swift */; };
+		DAF80B8528065F43000B0653 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,7 @@
 		DAF62DE227A25B0F00C53848 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		DAF80B7F28065028000B0653 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		DAF80B81280653B0000B0653 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +354,7 @@
 				DA0ABB1427F2AD0D0040CBBE /* FeedPresenter.swift */,
 				DA0ABB1627F3FC970040CBBE /* FeedImagePresenter.swift */,
 				DA4F7C8827FE77530005DAE2 /* Feed.strings */,
+				DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -872,6 +875,7 @@
 				DAF80B82280653B0000B0653 /* ErrorView.swift in Sources */,
 				DA4F7C8127FD75A50005DAE2 /* UIImageView+Animations.swift in Sources */,
 				DA5A95A127E1CE2B0057DE15 /* FeedImageCell.swift in Sources */,
+				DAF80B8528065F43000B0653 /* FeedErrorViewModel.swift in Sources */,
 				DAF80B8028065028000B0653 /* WeakRefVirtualProxy.swift in Sources */,
 				DA8E1B2427DC7A0100E88001 /* EssentialFeediOS.docc in Sources */,
 			);
