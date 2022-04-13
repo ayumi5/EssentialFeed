@@ -84,6 +84,7 @@
 		DAF80B82280653B0000B0653 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B81280653B0000B0653 /* ErrorView.swift */; };
 		DAF80B8528065F43000B0653 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */; };
 		DAF80B8728065FC5000B0653 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B8628065FC5000B0653 /* UIRefreshControl+Helpers.swift */; };
+		DAF80B8C28066774000B0653 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B8B28066774000B0653 /* FeedPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		DAF80B81280653B0000B0653 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		DAF80B8628065FC5000B0653 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
+		DAF80B8B28066774000B0653 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +470,7 @@
 		DA898FD5277083A400674D30 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAF80B8A28066700000B0653 /* Feed Presentation */,
 				DAC6244B2786856C0060C54B /* Helpers */,
 				DAF62DE127A25ACD00C53848 /* Feed Cache */,
 				DA08B1282778208B002E49BC /* FeedAPI */,
@@ -566,6 +569,14 @@
 				DAF80B8628065FC5000B0653 /* UIRefreshControl+Helpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DAF80B8A28066700000B0653 /* Feed Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DAF80B8B28066774000B0653 /* FeedPresenterTests.swift */,
+			);
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,6 +856,7 @@
 			files = (
 				DA74815B27B63C5800CE222E /* XCTestCase+FeedStoreSpecs.swift in Sources */,
 				DA898FE2277083BC00674D30 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
+				DAF80B8C28066774000B0653 /* FeedPresenterTests.swift in Sources */,
 				DA7D859227B9E210002ABB7D /* CoreDataFeedStoreTests.swift in Sources */,
 				DA74815D27B6552500CE222E /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */,
 				DAC6244D278685C70060C54B /* XCTestCase+MemoryLeakTracking.swift in Sources */,
