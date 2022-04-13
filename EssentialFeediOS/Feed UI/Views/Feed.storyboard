@@ -18,7 +18,19 @@
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Yay-Lv-gQ1" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-Ec-00q">
+                                    <rect key="frame" x="186" y="-3" width="84" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <outlet property="label" destination="Anm-Ec-00q" id="YFF-6m-KAp"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="xOf-ag-afP">
                             <rect key="frame" x="0.0" y="665" width="414" height="16"/>
