@@ -81,6 +81,7 @@
 		DAF1C615277466620060B65B /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1C614277466620060B65B /* FeedItemsMapper.swift */; };
 		DAF62DE327A25B0F00C53848 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF62DE227A25B0F00C53848 /* CacheFeedUseCaseTests.swift */; };
 		DAF80B8028065028000B0653 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B7F28065028000B0653 /* WeakRefVirtualProxy.swift */; };
+		DAF80B82280653B0000B0653 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B81280653B0000B0653 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 		DAF1C614277466620060B65B /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 		DAF62DE227A25B0F00C53848 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		DAF80B7F28065028000B0653 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
+		DAF80B81280653B0000B0653 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 				DA0D7DFB27FD1C19005BBB55 /* Feed.xcassets */,
 				DA4F7C7E27FD748F0005DAE2 /* UITableView+Dequeueing.swift */,
 				DA4F7C8027FD75A50005DAE2 /* UIImageView+Animations.swift */,
+				DAF80B81280653B0000B0653 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				DA0ABB0A27EEAC740040CBBE /* FeedImageCellController.swift in Sources */,
 				DA4F7C7F27FD748F0005DAE2 /* UITableView+Dequeueing.swift in Sources */,
 				DA0ABB0627EDA8B30040CBBE /* FeedImageLoader.swift in Sources */,
+				DAF80B82280653B0000B0653 /* ErrorView.swift in Sources */,
 				DA4F7C8127FD75A50005DAE2 /* UIImageView+Animations.swift in Sources */,
 				DA5A95A127E1CE2B0057DE15 /* FeedImageCell.swift in Sources */,
 				DAF80B8028065028000B0653 /* WeakRefVirtualProxy.swift in Sources */,
