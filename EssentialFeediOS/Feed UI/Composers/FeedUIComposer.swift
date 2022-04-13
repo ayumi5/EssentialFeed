@@ -19,7 +19,7 @@ public final class FeedUIComposer {
             delegate: presentationAdapter,
             title: FeedPresenter.title)
         
-        presentationAdapter.presenter = FeedPresenter(loadingView: WeakRefVirtualProxy(feedController), feedView: FeedViewAdapter(controller: feedController, loader: MainQueueDispatchDecorator(decoratee: imageLoader)), errorView: WeakRefVirtualProxy(feedController))
+        presentationAdapter.presenter = FeedPresenter(feedView: FeedViewAdapter(controller: feedController, loader: MainQueueDispatchDecorator(decoratee: imageLoader)), loadingView: WeakRefVirtualProxy(feedController), errorView: WeakRefVirtualProxy(feedController))
 
         return feedController
     }
@@ -35,6 +35,7 @@ private extension FeedViewController {
         feedController.title = title
         return feedController
     }
+}
 
 
 private final class FeedViewAdapter: FeedView {
