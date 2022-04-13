@@ -83,6 +83,7 @@
 		DAF80B8028065028000B0653 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B7F28065028000B0653 /* WeakRefVirtualProxy.swift */; };
 		DAF80B82280653B0000B0653 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B81280653B0000B0653 /* ErrorView.swift */; };
 		DAF80B8528065F43000B0653 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */; };
+		DAF80B8728065FC5000B0653 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF80B8628065FC5000B0653 /* UIRefreshControl+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		DAF80B7F28065028000B0653 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		DAF80B81280653B0000B0653 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		DAF80B8428065F43000B0653 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
+		DAF80B8628065FC5000B0653 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,6 +563,7 @@
 				DA4F7C8027FD75A50005DAE2 /* UIImageView+Animations.swift */,
 				DA4F7C7E27FD748F0005DAE2 /* UITableView+Dequeueing.swift */,
 				DA58A96D27EC09F40061919F /* UIView+Shimmering.swift */,
+				DAF80B8628065FC5000B0653 /* UIRefreshControl+Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				DA0ABB0D27EEBDA70040CBBE /* FeedUIComposer.swift in Sources */,
 				DA58A96E27EC09F40061919F /* UIView+Shimmering.swift in Sources */,
 				DA0ABB1527F2AD0D0040CBBE /* FeedPresenter.swift in Sources */,
+				DAF80B8728065FC5000B0653 /* UIRefreshControl+Helpers.swift in Sources */,
 				DA0ABB1227F18E160040CBBE /* FeedImageViewModel.swift in Sources */,
 				DA4F7C8F27FEC3890005DAE2 /* MainQueueDispatchDecorator.swift in Sources */,
 				DA0ABB1727F3FC970040CBBE /* FeedImagePresenter.swift in Sources */,
