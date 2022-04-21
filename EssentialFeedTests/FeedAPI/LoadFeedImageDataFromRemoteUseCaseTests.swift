@@ -90,7 +90,7 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         let clientError = NSError(domain: "a client error", code: 0)
         
         expect(sut, toReceiveResult: .failure(clientError), when: {
-            client.completeImageDataLoadingWith(clientError)
+            client.complete(with: clientError)
         })
     }
     
@@ -100,7 +100,7 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         let samples = [199, 201, 300, 400, 500]
         samples.enumerated().forEach { index, code in
             expect(sut, toReceiveResult: failure(.invalidData), when: {
-                client.completeImageDataLoading(withStatusCode: code, data: anyData(), at: index)
+                client.complete(withStatusCode: code, data: anyData(), at: index)
             })
         }
     }
@@ -110,7 +110,7 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         
         expect(sut, toReceiveResult: failure(.invalidData), when: {
             let emptyData = Data()
-            client.completeImageDataLoading(withStatusCode: 200, data: emptyData)
+            client.complete(withStatusCode: 200, data: emptyData)
         })
     }
     
@@ -119,7 +119,7 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         let nonEmptyData = Data("non-empty data".utf8)
         
         expect(sut, toReceiveResult: .success(nonEmptyData), when: {
-            client.completeImageDataLoading(withStatusCode: 200, data: nonEmptyData)
+            client.complete(withStatusCode: 200, data: nonEmptyData)
         })
     }
     
@@ -130,7 +130,7 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         
         sut?.loadImageData(from: anyURL()) { capturedResults.append($0) }
         sut = nil
-        client.completeImageDataLoading(withStatusCode: 200, data: anyData())
+        client.complete(withStatusCode: 200, data: anyData())
         
         XCTAssertTrue(capturedResults.isEmpty)
     }
@@ -154,9 +154,9 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         let task = sut.loadImageData(from: anyURL()) { receivedResults.append($0) }
         task.cancel()
         
-        client.completeImageDataLoading(withStatusCode: 404, data: anyData())
-        client.completeImageDataLoading(withStatusCode: 200, data: nonEmptyData)
-        client.completeImageDataLoadingWith(anyNSError())
+        client.complete(withStatusCode: 404, data: anyData())
+        client.complete(withStatusCode: 200, data: nonEmptyData)
+        client.complete(with: anyNSError())
         
         XCTAssertTrue(receivedResults.isEmpty)
     }
@@ -197,37 +197,5 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         return .failure(error)
     }
     
-    private class HTTPClientSpy: HTTPClient {
-        private struct Task: HTTPClientTask {
-            let callback: () -> Void
-            func cancel() {
-                callback()
-            }
-        }
-        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
-        var requestedURLs: [URL] {
-            return messages.map { $0.url}
-        }
-        var cancelledURLs = [URL]()
-        
-        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
-            messages.append((url, completion))
-            return Task { [weak self] in
-                self?.cancelledURLs.append(url)
-            }
-        }
-        
-        func completeImageDataLoadingWith(_ error: Error, at index:Int = 0) {
-            messages[index].completion(.failure(error))
-        }
-        
-        func completeImageDataLoading(withStatusCode code: Int, data: Data, at index: Int = 0) {
-            let response = HTTPURLResponse(url: requestedURLs[index],
-                                           statusCode: code,
-                                           httpVersion: nil,
-                                           headerFields: nil)!
-            messages[index].completion(.success((data, response)))
-        }
-        
-    }
+    
 }
