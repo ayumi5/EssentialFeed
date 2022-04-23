@@ -35,7 +35,7 @@ class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
     func test_loadFeedImageDataFromURL_deliverNotFoundErrorOnEmptyCache() {
         let (sut, store) = makeSUT()
         expect(sut, toCompleteWith: notFound(), when: {
-            store.complete(with: .none)
+            store.completeRetrieval(with: .none)
         })
     }
     
@@ -44,7 +44,7 @@ class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
         let foundData = anyData()
         
         expect(sut, toCompleteWith: .success(foundData), when: {
-            store.complete(with: foundData)
+            store.completeRetrieval(with: foundData)
         })
     }
     
@@ -56,8 +56,8 @@ class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
         let task = sut.loadImageData(from: anyURL()) { receivedResults.append($0)}
         task.cancel()
         
-        store.complete(with: foundData)
-        store.complete(with: .none)
+        store.completeRetrieval(with: foundData)
+        store.completeRetrieval(with: .none)
         store.completeRetrieval(with: anyNSError())
         
         XCTAssertTrue(receivedResults.isEmpty, "Expected no received results after cancelling task")
@@ -71,7 +71,7 @@ class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
         
         _ = sut?.loadImageData(from: anyURL()) { receivedResults.append($0)}
         sut = nil
-        store.complete(with: .none)
+        store.completeRetrieval(with: .none)
         
         XCTAssertTrue(receivedResults.isEmpty, "Expected no received results after instance has been deallocated")
     }
