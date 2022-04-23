@@ -35,6 +35,17 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
         expect(sut, toCompleteRetrievalWith: found(storedData), for: matchingURL)
     }
     
+    func test_retrieveImageData_deliversLastInsertedValue() {
+        let sut = makeSUT()
+        let url = URL(string: "http://a-url.com")!
+        let firstStoredData = Data("first-stored-data".utf8)
+        let lastStoredData = Data("last-stored-data".utf8)
+        
+        insert(firstStoredData, for: url, into: sut)
+        insert(lastStoredData, for: url, into: sut)
+        expect(sut, toCompleteRetrievalWith: found(lastStoredData), for: url)
+    }
+    
     // MARK: - Helpers
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> CoreDataFeedStore {
         let storeBundle = Bundle(for: CoreDataFeedStore.self)
