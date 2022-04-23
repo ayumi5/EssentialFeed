@@ -39,7 +39,7 @@ class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
         })
     }
     
-    func test_loadFeedImageDataFromURL_deliversStoredDataForURLOnNonFoundData() {
+    func test_loadFeedImageDataFromURL_deliversStoredDataForURLOnFoundData() {
         let (sut, store) = makeSUT()
         let foundData = anyData()
         
