@@ -26,6 +26,7 @@
 		DA3D2911281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2910281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift */; };
 		DA3D2913281A3B6D0036C268 /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2912281A3B6D0036C268 /* FeedLoaderStub.swift */; };
 		DA3D2915281A3CA00036C268 /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2914281A3CA00036C268 /* XCTestCase+FeedLoader.swift */; };
+		DA3D2919281A5E210036C268 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2918281A5E210036C268 /* FeedLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		DA3D2910281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		DA3D2912281A3B6D0036C268 /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 		DA3D2914281A3CA00036C268 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
+		DA3D2918281A5E210036C268 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				DA3A793F28162A1400DB868B /* Info.plist */,
 				DA2C88EC2816A22C0020FC67 /* FeedLoaderWithFallbackComposite.swift */,
 				DA142C9328191ED5008607C2 /* FeedImageDataLoaderWithFallbackComposite.swift */,
+				DA3D2918281A5E210036C268 /* FeedLoaderCacheDecorator.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				DA3A793628162A1200DB868B /* ViewController.swift in Sources */,
 				DA3A793228162A1200DB868B /* AppDelegate.swift in Sources */,
 				DA2C88ED2816A22C0020FC67 /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				DA3D2919281A5E210036C268 /* FeedLoaderCacheDecorator.swift in Sources */,
 				DA3A793428162A1200DB868B /* SceneDelegate.swift in Sources */,
 				DA142C9428191ED5008607C2 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
