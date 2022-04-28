@@ -29,6 +29,7 @@
 		DA3D2919281A5E210036C268 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2918281A5E210036C268 /* FeedLoaderCacheDecorator.swift */; };
 		DA3D291B281A5F630036C268 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D291A281A5F630036C268 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
 		DA3D291D281A66D40036C268 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D291C281A66D40036C268 /* FeedImageDataLoaderSpy.swift */; };
+		DA3D291F281A67680036C268 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D291E281A67680036C268 /* XCTestCase+FeedImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		DA3D2918281A5E210036C268 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		DA3D291A281A5F630036C268 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		DA3D291C281A66D40036C268 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
+		DA3D291E281A67680036C268 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				DA3D2912281A3B6D0036C268 /* FeedLoaderStub.swift */,
 				DA3D2914281A3CA00036C268 /* XCTestCase+FeedLoader.swift */,
 				DA3D291C281A66D40036C268 /* FeedImageDataLoaderSpy.swift */,
+				DA3D291E281A67680036C268 /* XCTestCase+FeedImageDataLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				DA142C992819200C008607C2 /* SharedTestHelpers.swift in Sources */,
 				DA3D291B281A5F630036C268 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				DA3D2915281A3CA00036C268 /* XCTestCase+FeedLoader.swift in Sources */,
+				DA3D291F281A67680036C268 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				DA3D2911281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				DA3D291D281A66D40036C268 /* FeedImageDataLoaderSpy.swift in Sources */,
 				DA2C88EF2818C0C90020FC67 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
