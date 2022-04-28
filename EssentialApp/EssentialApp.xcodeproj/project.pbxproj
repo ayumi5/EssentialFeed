@@ -24,6 +24,7 @@
 		DA3A796728162B2900DB868B /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3A796628162B2900DB868B /* EssentialFeediOS.framework */; };
 		DA3A796828162B2900DB868B /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA3A796628162B2900DB868B /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA3D2911281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2910281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift */; };
+		DA3D2913281A3B6D0036C268 /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D2912281A3B6D0036C268 /* FeedLoaderStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		DA3A796228162B2500DB868B /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3A796628162B2900DB868B /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3D2910281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
+		DA3D2912281A3B6D0036C268 /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				DA142C9628191FB6008607C2 /* XCTestCase+memoryLeakTracking.swift */,
 				DA142C982819200C008607C2 /* SharedTestHelpers.swift */,
+				DA3D2912281A3B6D0036C268 /* FeedLoaderStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				DA3D2911281A33C30036C268 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				DA2C88EF2818C0C90020FC67 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				DA2C88EB28167CDF0020FC67 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
+				DA3D2913281A3B6D0036C268 /* FeedLoaderStub.swift in Sources */,
 				DA142C9728191FB6008607C2 /* XCTestCase+memoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
