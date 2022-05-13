@@ -19,20 +19,25 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-Ec-00q">
-                                    <rect key="frame" x="186" y="-3" width="84" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-Ec-00q">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
                                     <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <connections>
                                         <outletCollection property="gestureRecognizers" destination="N1k-H9-o2W" appends="YES" id="Cx1-V4-DXa"/>
                                     </connections>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" red="0.92941176889999999" green="0.45098042490000001" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="Anm-Ec-00q" firstAttribute="leading" secondItem="Yay-Lv-gQ1" secondAttribute="leading" id="93Z-3f-PP3"/>
+                                <constraint firstAttribute="bottom" secondItem="Anm-Ec-00q" secondAttribute="bottom" id="KMv-4G-h0y"/>
+                                <constraint firstItem="Anm-Ec-00q" firstAttribute="top" secondItem="Yay-Lv-gQ1" secondAttribute="top" id="SYN-be-thG"/>
+                                <constraint firstAttribute="trailing" secondItem="Anm-Ec-00q" secondAttribute="trailing" id="wSn-hw-Usd"/>
+                            </constraints>
                             <connections>
                                 <outlet property="label" destination="Anm-Ec-00q" id="YFF-6m-KAp"/>
                             </connections>
