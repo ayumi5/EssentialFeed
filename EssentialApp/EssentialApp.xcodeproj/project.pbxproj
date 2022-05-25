@@ -23,7 +23,6 @@
 		DA3A796828162B2900DB868B /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA3A796628162B2900DB868B /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAEF8E51282B9D150060B305 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF8E4D282B9D150060B305 /* FeedImageDataLoaderPresentationAdapter.swift */; };
 		DAEF8E52282B9D150060B305 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF8E4F282B9D150060B305 /* FeedUIComposer.swift */; };
-		DAEF8E53282B9D150060B305 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF8E4B282B9D150060B305 /* MainQueueDispatchDecorator.swift */; };
 		DAEF8E54282B9D150060B305 /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF8E4C282B9D150060B305 /* FeedViewAdapter.swift */; };
 		DAEF8E55282B9D150060B305 /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF8E50282B9D150060B305 /* FeedLoaderPresentationAdapter.swift */; };
 		DAEF8E56282B9D150060B305 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF8E4E282B9D150060B305 /* WeakRefVirtualProxy.swift */; };
@@ -82,7 +81,6 @@
 		DA3A794428162A1400DB868B /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3A796228162B2500DB868B /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3A796628162B2900DB868B /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAEF8E4B282B9D150060B305 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		DAEF8E4C282B9D150060B305 /* FeedViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewAdapter.swift; sourceTree = "<group>"; };
 		DAEF8E4D282B9D150060B305 /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		DAEF8E4E282B9D150060B305 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				DAEF8E4F282B9D150060B305 /* FeedUIComposer.swift */,
-				DAEF8E4B282B9D150060B305 /* MainQueueDispatchDecorator.swift */,
 				DAEF8E4E282B9D150060B305 /* WeakRefVirtualProxy.swift */,
 				DAEF8E4D282B9D150060B305 /* FeedImageDataLoaderPresentationAdapter.swift */,
 				DAEF8E4C282B9D150060B305 /* FeedViewAdapter.swift */,
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEF8E53282B9D150060B305 /* MainQueueDispatchDecorator.swift in Sources */,
 				DA3A793628162A1200DB868B /* ViewController.swift in Sources */,
 				DA3A793228162A1200DB868B /* AppDelegate.swift in Sources */,
 				DA0F9FF3283DFBD900713F45 /* CombineHelpers.swift in Sources */,
