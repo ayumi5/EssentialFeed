@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0F9FF3283DFBD900713F45 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F9FF2283DFBD900713F45 /* CombineHelpers.swift */; };
 		DA142C9728191FB6008607C2 /* XCTestCase+memoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142C9628191FB6008607C2 /* XCTestCase+memoryLeakTracking.swift */; };
 		DA142C992819200C008607C2 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142C982819200C008607C2 /* SharedTestHelpers.swift */; };
 		DA2D3B82282E39A2001C2C22 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3B81282E39A2001C2C22 /* UIImage+TestHelpers.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA0F9FF2283DFBD900713F45 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		DA142C9628191FB6008607C2 /* XCTestCase+memoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+memoryLeakTracking.swift"; sourceTree = "<group>"; };
 		DA142C982819200C008607C2 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		DA2D3B81282E39A2001C2C22 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				DA3A793A28162A1400DB868B /* Assets.xcassets */,
 				DA3A793C28162A1400DB868B /* LaunchScreen.storyboard */,
 				DA3A793F28162A1400DB868B /* Info.plist */,
+				DA0F9FF2283DFBD900713F45 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				DAEF8E53282B9D150060B305 /* MainQueueDispatchDecorator.swift in Sources */,
 				DA3A793628162A1200DB868B /* ViewController.swift in Sources */,
 				DA3A793228162A1200DB868B /* AppDelegate.swift in Sources */,
+				DA0F9FF3283DFBD900713F45 /* CombineHelpers.swift in Sources */,
 				DAEF8E54282B9D150060B305 /* FeedViewAdapter.swift in Sources */,
 				DA3A793428162A1200DB868B /* SceneDelegate.swift in Sources */,
 				DAEF8E51282B9D150060B305 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
