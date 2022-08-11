@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public final class RemoteLoader<Resource> {
     private let url: URL
     private let client: HTTPClient
