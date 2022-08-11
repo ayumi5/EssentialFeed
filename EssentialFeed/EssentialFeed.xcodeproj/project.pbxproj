@@ -60,6 +60,7 @@
 		DA7E9FB928A48F0300E79236 /* LoadImageCommentFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E9FB828A48F0300E79236 /* LoadImageCommentFromRemoteUseCaseTests.swift */; };
 		DA7E9FBB28A490F200E79236 /* RemoteImageCommentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E9FBA28A490F200E79236 /* RemoteImageCommentLoader.swift */; };
 		DA7E9FBD28A4923F00E79236 /* ImageCommentMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E9FBC28A4923F00E79236 /* ImageCommentMapper.swift */; };
+		DA7E9FC028A4CF1000E79236 /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E9FBF28A4CF1000E79236 /* ImageComment.swift */; };
 		DA898FCC277083A400674D30 /* EssentialFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = DA898FCB277083A400674D30 /* EssentialFeed.docc */; };
 		DA898FD2277083A400674D30 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA898FC7277083A400674D30 /* EssentialFeed.framework */; };
 		DA898FD8277083A400674D30 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = DA898FCA277083A400674D30 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,6 +204,7 @@
 		DA7E9FB828A48F0300E79236 /* LoadImageCommentFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageCommentFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		DA7E9FBA28A490F200E79236 /* RemoteImageCommentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageCommentLoader.swift; sourceTree = "<group>"; };
 		DA7E9FBC28A4923F00E79236 /* ImageCommentMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentMapper.swift; sourceTree = "<group>"; };
+		DA7E9FBF28A4CF1000E79236 /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
 		DA898FC7277083A400674D30 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA898FCA277083A400674D30 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		DA898FCB277083A400674D30 /* EssentialFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeed.docc; sourceTree = "<group>"; };
@@ -438,6 +440,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		DA7E9FBE28A4CEC400E79236 /* Image Comments Feature */ = {
+			isa = PBXGroup;
+			children = (
+				DA7E9FBF28A4CF1000E79236 /* ImageComment.swift */,
+			);
+			path = "Image Comments Feature";
+			sourceTree = "<group>";
+		};
 		DA898FBD277083A400674D30 = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +478,7 @@
 		DA898FC9277083A400674D30 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				DA7E9FBE28A4CEC400E79236 /* Image Comments Feature */,
 				DA46A9D72806B64C00C4DA64 /* Feed Presentation */,
 				DA8D0B9227A77BAC0078BE64 /* Feed Cache */,
 				DA898FE72772BC5F00674D30 /* FeedAPI */,
@@ -854,6 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7E9FC028A4CF1000E79236 /* ImageComment.swift in Sources */,
 				DA46A9DC2806B7C300C4DA64 /* FeedViewModel.swift in Sources */,
 				DA8D0B9A27A7C0240078BE64 /* LocalFeedImage.swift in Sources */,
 				DA7D859727B9E839002ABB7D /* FeedStore.xcdatamodeld in Sources */,
