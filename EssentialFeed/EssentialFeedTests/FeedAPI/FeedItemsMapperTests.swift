@@ -61,15 +61,5 @@ class FeedItemsMapperTests: XCTestCase {
         
         return (model: item, json: json)
     }
-    
-    func makeItemsJson(_ items: [[String:Any]]) -> Data {
-        let itemsJSON = ["items": items]
-        return try! JSONSerialization.data(withJSONObject: itemsJSON)
-    }
 }
 
-private extension HTTPURLResponse {
-    convenience init(statusCode: Int) {
-        self.init(url: anyURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
-    }
-}
