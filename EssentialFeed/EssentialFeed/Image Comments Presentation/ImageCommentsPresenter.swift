@@ -28,15 +28,20 @@ public final class ImageCommentsPresenter {
         return NSLocalizedString("IMAGE_COMMENTS_VIEW_TITLE", tableName: "ImageComments", bundle: Bundle(for: Self.self), comment: "Title for the image comments view")
     }
     
-    public static func map(_ comments: [ImageComment]) -> ImageCommentsViewModel {
+    public static func map(
+        _ comments: [ImageComment],
+        currentDate: Date = Date(),
+        calendar: Calendar = .current,
+        locale: Locale = .current)
+    -> ImageCommentsViewModel {
         let formatter = RelativeDateTimeFormatter()
-        // TODO: Change the current locale to English to pass the test until localization is implemented
-        formatter.locale = Locale(identifier: "en")
+        formatter.calendar = calendar
+        formatter.locale = locale
         
         return ImageCommentsViewModel(comments: comments.map { comment in
             ImageCommentViewModel(
                 message: comment.message,
-                date: formatter.localizedString(for: comment.cratedAt, relativeTo: Date()),
+                date: formatter.localizedString(for: comment.cratedAt, relativeTo: currentDate),
                 username: comment.username)
         })
     }
