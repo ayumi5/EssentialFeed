@@ -1,5 +1,5 @@
 //
-//  ImageCommentViewController.swift
+//  ImageCommentCellController.swift
 //  EssentialFeediOS
 //
 //  Created by 宇高あゆみ on 2022/08/23.
@@ -8,7 +8,7 @@
 import UIKit
 import EssentialFeed
 
-public final class ImageCommentViewController: CellController {
+public final class ImageCommentCellController: CellController {
     private let model: ImageCommentViewModel
     public init(model: ImageCommentViewModel) {
         self.model = model
