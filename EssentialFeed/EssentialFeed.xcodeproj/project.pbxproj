@@ -110,6 +110,7 @@
 		DAE244ED28B4BACD00572517 /* IMAGE_COMMENTS_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE244EB28B4BACD00572517 /* IMAGE_COMMENTS_dark.png */; };
 		DAE244EE28B4BACD00572517 /* IMAGE_COMMENTS_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE244EC28B4BACD00572517 /* IMAGE_COMMENTS_light.png */; };
 		DAE244F028B4BC3A00572517 /* ImageCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE244EF28B4BC3A00572517 /* ImageCommentCell.swift */; };
+		DAE244F228B5BC6700572517 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE244F128B5BC6700572517 /* CellController.swift */; };
 		DAEFDF13282DE774007DAFC9 /* FeedSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEFDF12282DE774007DAFC9 /* FeedSnapshotTests.swift */; };
 		DAF1C613277465ED0060B65B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1C612277465ED0060B65B /* HTTPClient.swift */; };
 		DAF1C615277466620060B65B /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1C614277466620060B65B /* FeedItemsMapper.swift */; };
@@ -281,6 +282,7 @@
 		DAE244EB28B4BACD00572517 /* IMAGE_COMMENTS_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_dark.png; sourceTree = "<group>"; };
 		DAE244EC28B4BACD00572517 /* IMAGE_COMMENTS_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light.png; sourceTree = "<group>"; };
 		DAE244EF28B4BC3A00572517 /* ImageCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentCell.swift; sourceTree = "<group>"; };
+		DAE244F128B5BC6700572517 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		DAEFDF12282DE774007DAFC9 /* FeedSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnapshotTests.swift; sourceTree = "<group>"; };
 		DAF1C612277465ED0060B65B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		DAF1C614277466620060B65B /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5A959E27E176960057DE15 /* ListViewController.swift */,
+				DAE244F128B5BC6700572517 /* CellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1231,6 +1234,7 @@
 				DA5A95A127E1CE2B0057DE15 /* FeedImageCell.swift in Sources */,
 				DA8E1B2427DC7A0100E88001 /* EssentialFeediOS.docc in Sources */,
 				DAE244E628B4B7F400572517 /* ImageCommentCellController.swift in Sources */,
+				DAE244F228B5BC6700572517 /* CellController.swift in Sources */,
 				DAE244F028B4BC3A00572517 /* ImageCommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
