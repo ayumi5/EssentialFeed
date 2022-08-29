@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         LocalFeedLoader(store: store, currentDate: Date.init)
     }()
     
-    private lazy var remoteFeedLoader = httpClient.getPublisher(from: baseURL.appendingPathComponent("v1/feed")).tryMap(FeedItemsMapper.map)
+    private lazy var remoteFeedLoader = httpClient.getPublisher(from: FeedEndPoint.get.url(baseURL: baseURL)).tryMap(FeedItemsMapper.map)
         
     private lazy var navigationController: UINavigationController = {
         UINavigationController(rootViewController: FeedUIComposer.feedComposedWith(
@@ -64,7 +64,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func showComments(for image: FeedImage) {
-        let url = baseURL.appendingPathComponent("v1/image/\(image.id)/comments")
+        let url = ImageCommentEndPoint.get(image.id).url(baseURL: baseURL)
         let comments = CommentsUIComposer.commentsComposedWith(commentsLoader: makeCommentsLoader(url: url))
         navigationController.pushViewController(comments, animated: true)
     }
