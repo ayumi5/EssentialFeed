@@ -8,9 +8,11 @@
 import UIKit
 
 public class LoadMoreCell: UITableViewCell {
+
     private lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .medium)
         contentView.addSubview(spinner)
+
         spinner.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             spinner.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -41,7 +43,7 @@ public class LoadMoreCell: UITableViewCell {
         return label
     }()
     
-    var isLoading: Bool {
+    public var isLoading: Bool {
         get { spinner.isAnimating }
         set {
             if newValue {
@@ -52,8 +54,9 @@ public class LoadMoreCell: UITableViewCell {
         }
     }
     
-    var message: String? {
+    public var message: String? {
         get { messageLabel.text }
         set { messageLabel.text = newValue }
     }
+
 }
