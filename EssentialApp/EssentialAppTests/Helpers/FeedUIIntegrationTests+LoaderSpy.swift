@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests+LoaderSpy.swift
+//  FeedUIIntegrationTests+LoaderSpy.swift
 //  EssentialFeediOSTests
 //
 //  Created by 宇高あゆみ on 2022/03/25.
@@ -11,17 +11,18 @@ import EssentialFeediOS
 import Combine
 
 extension FeedUIIntegrationTests {
+    
     class LoaderSpy: FeedImageDataLoader {
         
         // MARK: - FeedLoader
         
         private var feedRequests = [PassthroughSubject<Paginated<FeedImage>, Error>]()
-        
-        private(set) var cancelledImageURLs = [URL]()
     
         var loadFeedCallCount: Int {
             return feedRequests.count
         }
+        
+        private(set) var loadMoreCallCount = 0
         
         func loadPublisher() -> AnyPublisher<Paginated<FeedImage>, Error> {
             let publisher = PassthroughSubject<Paginated<FeedImage>, Error>()
@@ -41,17 +42,19 @@ extension FeedUIIntegrationTests {
         // MARK: - FeedImageDataLoader
         
         private struct TaskSpy: FeedImageDataLoaderTask {
-            let cancelCallBlock: () -> Void
+            let cancelCallback: () -> Void
             func cancel() {
-                cancelCallBlock()
+                cancelCallback()
             }
         }
+        
+        private var imageRequests = [(url: URL, completion: (FeedImageDataLoader.Result) -> Void)]()
         
         var loadedImageURLs: [URL] {
             return imageRequests.map { $0.url }
         }
         
-        private var imageRequests = [(url: URL, completion: (FeedImageDataLoader.Result) -> Void)]()
+        private(set) var cancelledImageURLs = [URL]()
         
         func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
             imageRequests.append((url, completion))
