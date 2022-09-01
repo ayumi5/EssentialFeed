@@ -116,7 +116,7 @@ extension ListViewController {
     }
     
     func renderedFeedImageData(at index: Int) -> Data? {
-        simulateFeedImageViewVisible(at: index)?.renderedImage
+        return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
     
     func numberOfRenderedFeedImageViews() -> Int {
