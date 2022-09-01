@@ -12,7 +12,7 @@ import EssentialFeed
 public extension HTTPClient {
     typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
     
-    func getPublisher(from url: URL) -> Publisher {
+    func getPublisher(url: URL) -> Publisher {
         var task: HTTPClientTask?
         
         return Deferred {
@@ -72,7 +72,7 @@ extension Publisher {
 }
 
 extension Publisher where Output == Data {
-    func caching(to cache: FeedImageDataCache, from url: URL) -> AnyPublisher<Output, Failure> {
+    func caching(to cache: FeedImageDataCache, using url: URL) -> AnyPublisher<Output, Failure> {
         handleEvents(receiveOutput: { data in
             cache.saveIgnoringResult(data, for: url)
         }).eraseToAnyPublisher()

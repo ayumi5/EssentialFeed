@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ImageCommentEndPoint {
+public enum ImageCommentsEndpoint {
     case get(UUID)
     
     public func url(baseURL: URL) -> URL {
