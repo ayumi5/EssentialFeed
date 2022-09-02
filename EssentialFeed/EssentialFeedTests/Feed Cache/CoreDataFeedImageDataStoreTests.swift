@@ -46,27 +46,6 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
         expect(sut, toCompleteRetrievalWith: found(lastStoredData), for: url)
     }
     
-    func test_retrieveImageData_runsSerially() {
-        let sut = makeSUT()
-        let url = anyURL()
-
-        let op1 = expectation(description: "Operation 1")
-        sut.insert([localImage(url: url)], timestamp: Date()) { _ in
-            op1.fulfill()
-        }
-
-        let op2 = expectation(description: "Operation 2")
-        sut.insert(data: anyData(), for: url) { _ in
-            op2.fulfill()
-        }
-        let op3 = expectation(description: "Operation 3")
-        sut.insert(data: anyData(), for: url) { _ in
-            op3.fulfill()
-        }
-        wait(for: [op1, op2, op3], timeout: 5.0, enforceOrder: true)
-
-    }
-    
     // MARK: - Helpers
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> CoreDataFeedStore {
         let storeURL = URL(fileURLWithPath: "/dev/null")
@@ -76,11 +55,11 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
         return sut
     }
     
-    private func notFound() -> FeedImageDataStore.RetrievalResult {
+    private func notFound() -> Result<Data?, Error> {
         return .success(.none)
     }
     
-    private func found(_ data: Data) -> FeedImageDataStore.RetrievalResult {
+    private func found(_ data: Data) -> Result<Data?, Error> {
         return .success(data)
     }
     
@@ -88,7 +67,7 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
         return LocalFeedImage(id: UUID(), description: "any", location: "any", url: url)
     }
     
-    private func expect(_ sut: FeedImageDataStore, toCompleteRetrievalWith expectedResult: FeedImageDataStore.RetrievalResult, for url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) {
+    private func expect(_ sut: FeedImageDataStore, toCompleteRetrievalWith expectedResult: Result<Data?, Error>, for url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) {
         let receivedResult = Result { try sut.retrieve(dataForUrl: url) }
         switch (receivedResult, expectedResult) {
         case let (.success(receivedData), .success(expectedData)):
@@ -101,14 +80,13 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
     }
     
     private func insert(_ data: Data, for url: URL, into sut: CoreDataFeedStore, file: StaticString = #file, line: UInt = #line) {
-        let exp = expectation(description: "Wait for cache insertion")
+
         let image = localImage(url: url)
         sut.insert([image], timestamp: Date()) { result in
             if case let .failure(error) = result {
                 XCTFail("Failed to save \(image) with error \(error)", file: file, line: line)
             }
         }
-        wait(for: [exp], timeout: 1.0)
         
         do {
             try sut.insert(data: data, for: url)
