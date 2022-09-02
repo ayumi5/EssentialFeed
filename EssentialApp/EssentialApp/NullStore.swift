@@ -8,7 +8,7 @@
 import Foundation
 import EssentialFeed
 
-class NullStore: FeedStore & FeedImageDataStore {
+class NullStore: FeedStore {
     func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         completion(.success(()))
     }
@@ -20,12 +20,10 @@ class NullStore: FeedStore & FeedImageDataStore {
     func retrieve(completion: @escaping RetrievalCompletion) {
         completion(.success(.none))
     }
+}
+
+extension NullStore: FeedImageDataStore {
+    func retrieve(dataForUrl url: URL) throws -> Data? { .none }
     
-    func retrieve(dataForUrl url: URL, completion: @escaping (FeedImageDataStore.RetrievalResult) -> Void) {
-        completion(.success(.none))
-    }
-    
-    func insert(data: Data, for url: URL, completion: @escaping (InsertionResult) -> Void) {
-        completion(.success(()))
-    }
+    func insert(data: Data, for url: URL) throws {}
 }
