@@ -89,41 +89,31 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
     }
     
     private func expect(_ sut: FeedImageDataStore, toCompleteRetrievalWith expectedResult: FeedImageDataStore.RetrievalResult, for url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) {
-        let exp = expectation(description: "Wait for retrieal completion")
-        
-        sut.retrieve(dataForUrl: url) { receivedResult in
-            switch (receivedResult, expectedResult) {
-            case let (.success(receivedData), .success(expectedData)):
-                XCTAssertEqual(receivedData, expectedData, file: file, line: line)
-            case let (.failure(receivedError as NSError), .failure(expectedError as NSError)):
-                XCTAssertEqual(receivedError, expectedError, file: file, line: line)
-            default:
-                XCTFail("Expected result \(expectedResult), got \(receivedResult) instead")
-            }
-            exp.fulfill()
+        let receivedResult = Result { try sut.retrieve(dataForUrl: url) }
+        switch (receivedResult, expectedResult) {
+        case let (.success(receivedData), .success(expectedData)):
+            XCTAssertEqual(receivedData, expectedData, file: file, line: line)
+        case let (.failure(receivedError as NSError), .failure(expectedError as NSError)):
+            XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+        default:
+            XCTFail("Expected result \(expectedResult), got \(receivedResult) instead")
         }
-        
-        wait(for: [exp], timeout: 1.0)
     }
     
     private func insert(_ data: Data, for url: URL, into sut: CoreDataFeedStore, file: StaticString = #file, line: UInt = #line) {
         let exp = expectation(description: "Wait for cache insertion")
         let image = localImage(url: url)
         sut.insert([image], timestamp: Date()) { result in
-            switch result {
-            case let .failure(error):
+            if case let .failure(error) = result {
                 XCTFail("Failed to save \(image) with error \(error)", file: file, line: line)
-                exp.fulfill()
-            case .success:
-                sut.insert(data: data, for: url) { result in
-                    if case let Result.failure(error) = result {
-                        XCTFail("Failed to insert \(data) with error \(error)", file: file, line: line)
-                    }
-                }
-                exp.fulfill()
             }
         }
-        
         wait(for: [exp], timeout: 1.0)
+        
+        do {
+            try sut.insert(data: data, for: url)
+        } catch {
+            XCTFail("Failed to insert \(data) with error \(error)", file: file, line: line)
+        }
     }
 }
