@@ -9,10 +9,6 @@ import Foundation
 import EssentialFeed
 
 class FeedStoreSpy: FeedStore {
-    typealias DeletionCompletion = (DeletionResult) -> Void
-    typealias InsertionCompletion = (InsertionResult) -> Void
-    typealias RetrievalCompletion = (RetrievalResult) -> Void
-    
     var deletionResult: Result<Void, Error>?
     var insertionResult: Result<Void, Error>?
     var retrievalResult: Result<CachedFeed?, Error>?
