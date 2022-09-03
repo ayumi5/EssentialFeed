@@ -13,7 +13,7 @@ class NullStore: FeedStore {
     
     func insert(_ feed: [EssentialFeed.LocalFeedImage], timestamp: Date) throws {}
     
-    func retrieve() throws {}   
+    func retrieve() throws -> CachedFeed? { .none }   
 }
 
 extension NullStore: FeedImageDataStore {
