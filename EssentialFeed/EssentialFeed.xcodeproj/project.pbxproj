@@ -680,16 +680,16 @@
 		DA898FC9277083A400674D30 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
-				DACE300228B3197500D53B5B /* SharedPresentation */,
 				DA7E9FC128A4E2E000E79236 /* Shared API */,
 				DA7E9FC228A4E30200E79236 /* Shared API Infra */,
+				DACE300228B3197500D53B5B /* SharedPresentation */,
+				DA898FE82772BC6C00674D30 /* FeedFeature */,
+				DA898FE72772BC5F00674D30 /* FeedAPI */,
+				DA8D0B9227A77BAC0078BE64 /* Feed Cache */,
+				DA46A9D72806B64C00C4DA64 /* Feed Presentation */,
+				DA7E9FBE28A4CEC400E79236 /* Image Comments Feature */,
 				DA7E9FC628A4E41D00E79236 /* ImageCommentsAPI */,
 				DA317FEC28B4533A002A06B2 /* Image Comments Presentation */,
-				DA7E9FBE28A4CEC400E79236 /* Image Comments Feature */,
-				DA46A9D72806B64C00C4DA64 /* Feed Presentation */,
-				DA8D0B9227A77BAC0078BE64 /* Feed Cache */,
-				DA898FE72772BC5F00674D30 /* FeedAPI */,
-				DA898FE82772BC6C00674D30 /* FeedFeature */,
 				DA898FCA277083A400674D30 /* EssentialFeed.h */,
 				DA898FCB277083A400674D30 /* EssentialFeed.docc */,
 			);
@@ -699,14 +699,14 @@
 		DA898FD5277083A400674D30 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				DACE2FFF28B3182B00D53B5B /* Shared Presentation */,
 				DA7E9FC328A4E32F00E79236 /* Shared API */,
 				DA7E9FC528A4E36500E79236 /* Shared API Infra */,
+				DACE2FFF28B3182B00D53B5B /* Shared Presentation */,
+				DA08B1282778208B002E49BC /* Feed API */,
+				DAF62DE127A25ACD00C53848 /* Feed Cache */,
+				DAF80B8A28066700000B0653 /* Feed Presentation */,
 				DA7E9FC728A4E43C00E79236 /* Image Comments API */,
 				DA317FE928B4524D002A06B2 /* Image Comment Presentation */,
-				DAF80B8A28066700000B0653 /* Feed Presentation */,
-				DAF62DE127A25ACD00C53848 /* Feed Cache */,
-				DA08B1282778208B002E49BC /* Feed API */,
 				DAC6244B2786856C0060C54B /* Helpers */,
 			);
 			path = EssentialFeedTests;
@@ -752,8 +752,8 @@
 			isa = PBXGroup;
 			children = (
 				DA317FF828B470C3002A06B2 /* Shared UI */,
-				DAE244E328B4B7D900572517 /* Image Comments UI */,
 				DA0ABB0327EDA8490040CBBE /* Feed UI */,
+				DAE244E328B4B7D900572517 /* Image Comments UI */,
 				DA8E1B2327DC7A0100E88001 /* EssentialFeediOS.docc */,
 			);
 			path = EssentialFeediOS;
@@ -763,8 +763,8 @@
 			isa = PBXGroup;
 			children = (
 				DA1B0BF528B4AD6900D6A7FA /* Shared UI */,
-				DAE244E028B4B61E00572517 /* Image Comments UI */,
 				DAF83C1B28B4982C0057BD00 /* Feed UI */,
+				DAE244E028B4B61E00572517 /* Image Comments UI */,
 				DA2D3B7E282E3990001C2C22 /* Helpers */,
 			);
 			path = EssentialFeediOSTests;
