@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    with:
+        xcode-version: latest
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.4.app
     - name: Build and test
