@@ -10,6 +10,7 @@ jobs:
   build-and-test:
 
     runs-on: macos-latest
+    xcode-version: latest
 
     steps:
     - uses: actions/checkout@v2
