@@ -9,12 +9,10 @@ on:
 jobs:
   build-and-test:
 
-    runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
     - uses: actions/checkout@v2
-    with:
-        xcode-version: latest
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.4.app
     - name: Build and test
